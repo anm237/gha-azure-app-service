@@ -25,6 +25,9 @@ jobs:
       with:
           source-directory: .
           output-directory: .
+    - name: Make zip
+      run: |
+        zip -r test.zip .
     - name: Deploy web App using GH Action azure/webapps-deploy
       uses: azure/webapps-deploy@v2
       with:
